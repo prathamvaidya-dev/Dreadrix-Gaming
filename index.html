@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreadrix | Immersive 3D Experience</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+    <!-- 3D Loader -->
+    <div class="loader" id="loader">
+        <div class="cube">
+            <div class="cube-face front"></div>
+            <div class="cube-face back"></div>
+            <div class="cube-face right"></div>
+            <div class="cube-face left"></div>
+            <div class="cube-face top"></div>
+            <div class="cube-face bottom"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" data-page="home">Dreadrix GAMING</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-page="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-page="games">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-page="features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-page="community">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-page="support">Support</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-3d btn-primary" href="#" data-page="play">Play Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="container hero-content">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="hero-title">Enter The <span style="display: block;">3D Dimension</span></h1>
+                        <p class="hero-subtitle">Immerse yourself in our revolutionary gaming platform with stunning 3D
+                            visuals and responsive gameplay.</p>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <button class="btn btn-3d btn-primary px-4 py-3">Get Started</button>
+                            <button class="btn btn-outline-light px-4 py-3">Watch Trailer <i
+                                    class="fas fa-play ms-2"></i></button>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-6 d-none d-lg-block">
+                        <div class="floating">
+                            <img src="https://wallpapers.com/images/hd/4k-gaming-background-bud9k5ffqi3r2ds9.jpg"
+                                alt="3D Game Illustration" class="img-fluid">
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Games Showcase -->
+        <section class="showcase">
+            <div class="container">
+                <h2 class="section-title">Featured Games</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="game-card h-100 p-3">
+                            <div class="game-img-container overflow-hidden rounded">
+                                <img src="https://i.redd.it/5p16231zzx651.png" alt="Apex Legends"
+                                    class="img-fluid game-img">
+                            </div>
+                            <div class="game-content pt-3">
+                                <h3>Apex Legends</h3>
+                                <p>Squad-based battle royale with unique heroes and fast-paced action.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-primary">Action</span>
+                                    <button class="btn btn-sm btn-3d">Play Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="game-card h-100 p-3">
+                            <div class="game-img-container overflow-hidden rounded">
+                                <img src="https://rare-gallery.com/mocahbig/435866-Elderwood-Ivern-League-of-Legends-League-of-Legends.jpg"
+                                    alt="Elderwood Saga" class="img-fluid game-img">
+                            </div>
+                            <div class="game-content pt-3">
+                                <h3>Elderwood Saga</h3>
+                                <p>Embark on a magical quest through enchanted forests and ancient ruins.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-success">Adventure</span>
+                                    <button class="btn btn-sm btn-3d">Play Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="game-card h-100 p-3">
+                            <div class="game-img-container overflow-hidden rounded">
+                                <img src="https://c4.wallpaperflare.com/wallpaper/813/756/922/car-split-second-race-cars-video-games-wallpaper-preview.jpg"
+                                    alt="Velocity Drift" class="img-fluid game-img">
+                            </div>
+                            <div class="game-content pt-3">
+                                <h3>Velocity Drift</h3>
+                                <p>Race at breakneck speeds through neon-lit cityscapes and winding tracks.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-danger">Racing</span>
+                                    <button class="btn btn-sm btn-3d">Play Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="showcase bg-dark py-5">
+            <div class="container">
+                <h2 class="section-title">Why Choose Us</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="text-center p-4 game-card">
+                            <div class="mb-4">
+                                <i class="fas fa-gamepad fa-3x text-primary"></i>
+                            </div>
+                            <h3>Immersive 3D Graphics</h3>
+                            <p>Experience games with cutting-edge 3D graphics that push the boundaries of reality.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center p-4 game-card">
+                            <div class="mb-4">
+                                <i class="fas fa-globe fa-3x text-primary"></i>
+                            </div>
+                            <h3>Cross-Platform Play</h3>
+                            <p>Play with friends across different devices and platforms seamlessly.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center p-4 game-card">
+                            <div class="mb-4">
+                                <i class="fas fa-users fa-3x text-primary"></i>
+                            </div>
+                            <h3>Vibrant Community</h3>
+                            <p>Join millions of players in an active and friendly gaming community.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-5">
+            <div class="container">
+                <div class="game-card p-5 text-center">
+                    <h2 class="mb-4">Ready to Enter the 3D Gaming World?</h2>
+                    <p class="lead mb-4">Join now and get exclusive access to beta features and special rewards.</p>
+                    <button class="btn btn-3d btn-primary btn-lg px-5 py-3">Create Free Account</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Games Page -->
+    <div id="games" class="page">
+        <section class="showcase">
+            <div class="container">
+                <h2 class="section-title">Our Game Library</h2>
+                <div class="row g-4">
+                    <!-- Game cards will be repeated here -->
+                    <div class="col-md-4">
+                        <div class="game-card h-100 p-3">
+                            <div class="game-img-container overflow-hidden rounded">
+                                <img src="https://mmos.com/wp-content/gallery/heroes-of-skyrealm-overview/heroes-of-skyrealm-airship.jpg"
+                                    alt="Sky Realms" class="img-fluid game-img">
+                            </div>
+                            <div class="game-content pt-3">
+                                <h3>Sky Realms</h3>
+                                <p>Soar through floating islands and battle aerial foes in a fantasy world above the
+                                    clouds.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-info">Fantasy</span>
+                                    <button class="btn btn-sm btn-3d">Play Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="game-card h-100 p-3">
+                            <div class="game-img-container overflow-hidden rounded">
+                                <img src="https://www.supersoluce.com/actualites/wp-content/uploads/actu-supersoluce/2025/05/shade-protocol-zura.jpg"
+                                    alt="Shadow Protocol" class="img-fluid game-img">
+                            </div>
+                            <div class="game-content pt-3">
+                                <h3>Shadow Protocol</h3>
+                                <p>Stealth-based tactical shooter where every move could be your last.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-dark">Stealth</span>
+                                    <button class="btn btn-sm btn-3d">Play Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="game-card h-100 p-3">
+                            <div class="game-img-container overflow-hidden rounded">
+                                <img src="https://images8.alphacoders.com/864/864351.png" alt="Pixel Odyssey"
+                                    class="img-fluid game-img">
+                            </div>
+                            <div class="game-content pt-3">
+                                <h3>Pixel Odyssey</h3>
+                                <p>Retro-inspired platformer with modern twists and challenging puzzles.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-warning">Platformer</span>
+                                    <button class="btn btn-sm btn-3d">Play Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="game-card h-100 p-3">
+                            <div class="game-img-container overflow-hidden rounded">
+                                <img src="https://i.redd.it/5p16231zzx651.png" alt="Apex Legends"
+                                    class="img-fluid game-img">
+                            </div>
+                            <div class="game-content pt-3">
+                                <h3>Apex Legends</h3>
+                                <p>Squad-based battle royale with unique heroes and fast-paced action.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-primary">Action</span>
+                                    <button class="btn btn-sm btn-3d">Play Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="game-card h-100 p-3">
+                            <div class="game-img-container overflow-hidden rounded">
+                                <img src="https://rare-gallery.com/mocahbig/435866-Elderwood-Ivern-League-of-Legends-League-of-Legends.jpg"
+                                    alt="Elderwood Saga" class="img-fluid game-img">
+                            </div>
+                            <div class="game-content pt-3">
+                                <h3>Elderwood Saga</h3>
+                                <p>Embark on a magical quest through enchanted forests and ancient ruins.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-success">Adventure</span>
+                                    <button class="btn btn-sm btn-3d">Play Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="game-card h-100 p-3">
+                            <div class="game-img-container overflow-hidden rounded">
+                                <img src="https://c4.wallpaperflare.com/wallpaper/813/756/922/car-split-second-race-cars-video-games-wallpaper-preview.jpg"
+                                    alt="Velocity Drift" class="img-fluid game-img">
+                            </div>
+                            <div class="game-content pt-3">
+                                <h3>Velocity Drift</h3>
+                                <p>Race at breakneck speeds through neon-lit cityscapes and winding tracks.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-danger">Racing</span>
+                                    <button class="btn btn-sm btn-3d">Play Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Additional game cards -->
+                    <div class="col-md-4">
+                        <div class="game-card h-100 p-3">
+                            <div class="game-img-container overflow-hidden rounded">
+                                <img src="https://images.stockcake.com/public/f/4/c/f4cdbfdb-f8fa-48b0-b32f-91bc2cea0016_large/neon-warriors-assembled-stockcake.jpg"
+                                    alt="Neon Warriors" class="img-fluid game-img">
+                            </div>
+                            <div class="game-content pt-3">
+                                <h3>Neon Warriors</h3>
+                                <p>Team-based shooter with neon aesthetics and fast-paced action.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-info">Shooter</span>
+                                    <button class="btn btn-sm btn-3d">Play Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="game-card h-100 p-3">
+                            <div class="game-img-container overflow-hidden rounded">
+                                <img src="https://i.ytimg.com/vi/LHoPG_JELyQ/maxresdefault.jpg" alt="Pixel Quest"
+                                    class="img-fluid game-img">
+                            </div>
+                            <div class="game-content pt-3">
+                                <h3>Pixel Quest</h3>
+                                <p>Retro-style adventure with modern 3D visuals and puzzles.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-warning">Puzzle</span>
+                                    <button class="btn btn-sm btn-3d">Play Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="game-card h-100 p-3">
+                            <div class="game-img-container overflow-hidden rounded">
+                                <img src="https://i.pinimg.com/736x/e2/58/07/e25807250c2efb7c133ffac874d44167.jpg"
+                                    alt="Orbit Combat" class="img-fluid game-img">
+                            </div>
+                            <div class="game-content pt-3">
+                                <h3>Orbit Combat</h3>
+                                <p>Space dogfighting game with zero-gravity physics and stunning visuals.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-secondary">Space</span>
+                                    <button class="btn btn-sm btn-3d">Play Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="game-card h-100 p-3">
+                            <div class="game-img-container overflow-hidden rounded">
+                                <img src="https://i.ytimg.com/vi/29B9v0wsPbA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBI-F4P8c2qgrvcriWItqzoHz-TXA"
+                                    alt="Game 6" class="img-fluid game-img">
+                            </div>
+                            <div class="game-content pt-3">
+                                <h3>Hazmob FPS: Online Shooter</h3>
+                                <p>Hazmob FPS: Online Shooter is a multiplayer shooting FPS game where every second
+                                    counts! Play against other players across multiple game modes in non-stop combat.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-secondary">Combat</span>
+                                    <button class="btn btn-sm btn-3d">Play Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="game-card h-100 p-3">
+                            <div class="game-img-container overflow-hidden rounded">
+                                <img src="https://images2.alphacoders.com/589/589181.jpg" alt="Game 6"
+                                    class="img-fluid game-img">
+                            </div>
+                            <div class="game-content pt-3">
+                                <h3>Soccer Legends</h3>
+                                <p>Soccer Legends is an exciting multiplayer soccer game where you can compete against
+                                    players from around the world. Show off your skills and lead your team to victory!
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-secondary">Sports</span>
+                                    <button class="btn btn-sm btn-3d">Play Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="game-card h-100 p-3">
+                            <div class="game-img-container overflow-hidden rounded">
+                                <img src="https://w0.peakpx.com/wallpaper/304/47/HD-wallpaper-marvels-avengers-2020-game-marvels-avengers-marvel-avengers-games-iron-man.jpg"
+                                    alt="Game 6" class="img-fluid game-img">
+                            </div>
+                            <div class="game-content pt-3">
+                                <h3>Marvels Avengers</h3>
+                                <p>Marvels Avengers is an action-adventure game that combines the cinematic storytelling
+                                    of the Marvel universe with the excitement of cooperative gameplay.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-secondary">Action</span>
+                                    <button class="btn btn-sm btn-3d">Play Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Features Page -->
+    <div id="features" class="page">
+        <section class="showcase">
+            <div class="container">
+                <h2 class="section-title">Platform Features</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="game-card p-4 h-100">
+                            <div class="text-center mb-4">
+                                <i class="fas fa-vr-cardboard fa-4x text-primary"></i>
+                            </div>
+                            <h3 class="text-center">VR Compatibility</h3>
+                            <p>Our platform supports virtual reality for the most immersive gaming experience possible.
+                                Feel like you're inside the game with our advanced VR integration.</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-transparent text-light border-light">Supports Oculus Rift,
+                                    HTC Vive, and more</li>
+                                <li class="list-group-item bg-transparent text-light border-light">Customizable VR
+                                    controls</li>
+                                <li class="list-group-item bg-transparent text-light border-light">Motion sickness
+                                    reduction technology</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="game-card p-4 h-100">
+                            <div class="text-center mb-4">
+                                <i class="fas fa-tachometer-alt fa-4x text-primary"></i>
+                            </div>
+                            <h3 class="text-center">Performance Boost</h3>
+                            <p>Our proprietary technology enhances game performance even on lower-end devices, ensuring
+                                smooth gameplay for everyone.</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-transparent text-light border-light">AI-powered
+                                    optimization</li>
+                                <li class="list-group-item bg-transparent text-light border-light">Dynamic resolution
+                                    scaling</li>
+                                <li class="list-group-item bg-transparent text-light border-light">Reduced loading times
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="game-card p-4 h-100">
+                            <div class="text-center mb-4">
+                                <i class="fas fa-cloud fa-4x text-primary"></i>
+                            </div>
+                            <h3 class="text-center">Cloud Saves</h3>
+                            <p>Never lose your progress again. Our cloud saving system automatically backs up your game
+                                data across all your devices.</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-transparent text-light border-light">Automatic sync across
+                                    devices</li>
+                                <li class="list-group-item bg-transparent text-light border-light">Unlimited storage
+                                </li>
+                                <li class="list-group-item bg-transparent text-light border-light">Version history and
+                                    restore points</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="game-card p-4 h-100">
+                            <div class="text-center mb-4">
+                                <i class="fas fa-broadcast-tower fa-4x text-primary"></i>
+                            </div>
+                            <h3 class="text-center">Low Latency</h3>
+                            <p>Our global server network ensures the lowest possible latency no matter where you are in
+                                the world.</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-transparent text-light border-light">Global server
+                                    locations</li>
+                                <li class="list-group-item bg-transparent text-light border-light">Intelligent routing
+                                </li>
+                                <li class="list-group-item bg-transparent text-light border-light">DDoS protection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Community Page -->
+    <div id="community" class="page">
+        <section class="showcase">
+            <div class="container">
+                <h2 class="section-title">Join Our Community</h2>
+                <div class="row g-4">
+                    <div class="col-md-8">
+                        <div class="game-card p-4 h-100">
+                            <h3>Community Hub</h3>
+                            <p>Connect with other players, join clans, participate in tournaments, and stay up-to-date
+                                with the latest news and events.</p>
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-4">
+                                        <div class="bg-primary p-3 rounded-circle me-3">
+                                            <i class="fas fa-trophy fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-0">Tournaments</h5>
+                                            <p class="mb-0">Compete for prizes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-4">
+                                        <div class="bg-success p-3 rounded-circle me-3">
+                                            <i class="fas fa-users fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-0">Clans</h5>
+                                            <p class="mb-0">Join or create a clan</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-4">
+                                        <div class="bg-info p-3 rounded-circle me-3">
+                                            <i class="fas fa-calendar-alt fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-0">Events</h5>
+                                            <p class="mb-0">Special in-game events</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-4">
+                                        <div class="bg-warning p-3 rounded-circle me-3">
+                                            <i class="fas fa-store fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-0">Marketplace</h5>
+                                            <p class="mb-0">Trade items with players</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="game-card p-4 h-100">
+                            <h3>Live Chat</h3>
+                            <div class="chat-container mt-4">
+                                <div class="chat-message d-flex mb-3">
+                                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'><circle cx='20' cy='20' r='20' fill='%236c5ce7'/><text x='20' y='26' font-family='Arial' font-size='16' fill='white' text-anchor='middle'>JD</text></svg>"
+                                        alt="User" class="me-3">
+                                    <div>
+                                        <h6 class="mb-0">JohnDoe92 <span class="text-muted">- 2 min ago</span></h6>
+                                        <p class="mb-0">Just got the new skin! It looks amazing in 3D!</p>
+                                    </div>
+                                </div>
+                                <div class="chat-message d-flex mb-3">
+                                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'><circle cx='20' cy='20' r='20' fill='%23fd79a8'/><text x='20' y='26' font-family='Arial' font-size='16' fill='white' text-anchor='middle'>SG</text></svg>"
+                                        alt="User" class="me-3">
+                                    <div>
+                                        <h6 class="mb-0">SpaceGamer <span class="text-muted">- 5 min ago</span></h6>
+                                        <p class="mb-0">Anyone up for a tournament this weekend?</p>
+                                    </div>
+                                </div>
+                                <div class="chat-message d-flex mb-3">
+                                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'><circle cx='20' cy='20' r='20' fill='%2300ceff'/><text x='20' y='26' font-family='Arial' font-size='16' fill='white' text-anchor='middle'>NL</text></svg>"
+                                        alt="User" class="me-3">
+                                    <div>
+                                        <h6 class="mb-0">NeonLights <span class="text-muted">- 10 min ago</span></h6>
+                                        <p class="mb-0">The new update is incredible! The 3D effects are mind-blowing!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group mt-3">
+                                <input type="text" class="form-control" placeholder="Type your message...">
+                                <button class="btn btn-primary">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Support Page -->
+    <div id="support" class="page">
+        <section class="showcase">
+            <div class="container">
+                <h2 class="section-title">Support Center</h2>
+                <div class="row g-4">
+                    <div class="col-md-8">
+                        <div class="game-card p-4 h-100">
+                            <h3>Frequently Asked Questions</h3>
+                            <div class="accordion accordion-flush mt-4" id="faqAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#faq1">
+                                            How do I enable 3D mode?
+                                        </button>
+                                    </h2>
+                                    <div id="faq1" class="accordion-collapse collapse show"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            You can enable 3D mode in the graphics settings of each game. Look for the
+                                            "3D Rendering" option and toggle it on. For the best experience, we
+                                            recommend using a device with a dedicated graphics card.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq2">
+                                            What are the system requirements?
+                                        </button>
+                                    </h2>
+                                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Minimum requirements: CPU with 4 cores, 8GB RAM, DirectX 11 compatible GPU.
+                                            Recommended: CPU with 8 cores, 16GB RAM, DirectX 12 compatible GPU with 6GB
+                                            VRAM. SSD storage is highly recommended for faster loading times.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq3">
+                                            How do I join a clan?
+                                        </button>
+                                    </h2>
+                                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            To join a clan, go to the Community section, select "Clans", and browse
+                                            available clans. You can apply to join a clan or create your own. Some clans
+                                            may have requirements for membership.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="game-card p-4 h-100">
+                            <h3>Contact Support</h3>
+                            <form class="mt-4">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="issue" class="form-label">Issue Type</label>
+                                    <select class="form-select" id="issue">
+                                        <option selected>Select an issue</option>
+                                        <option>Technical Problem</option>
+                                        <option>Billing Question</option>
+                                        <option>Account Issue</option>
+                                        <option>Game Bug</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="4"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-3d btn-primary w-100">Submit Request</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Play Now Page -->
+    <div id="play" class="page">
+        <section class="showcase">
+            <div class="container">
+                <h2 class="section-title">Start Playing Now</h2>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="game-card p-4 h-100">
+                            <h3>Create Your Account</h3>
+                            <p>Join millions of players in our immersive 3D gaming universe.</p>
+                            <form class="mt-4">
+                                <div class="mb-3">
+                                    <label for="signup-email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="signup-email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="signup-username" class="form-label">Username</label>
+                                    <input type="text" class="form-control" id="signup-username">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="signup-password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="signup-password">
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="terms">
+                                    <label class="form-check-label" for="terms">
+                                        I agree to the Terms of Service and Privacy Policy
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-3d btn-primary w-100">Create Account</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="game-card p-4 h-100">
+                            <h3>Download Client</h3>
+                            <p>Download our gaming client to access all games and features.</p>
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <div class="text-center p-3">
+                                        <i class="fab fa-windows fa-4x mb-3"></i>
+                                        <h5>Windows</h5>
+                                        <p>Version 2.4.1 | 128 MB</p>
+                                        <button class="btn btn-3d btn-sm btn-primary">Download</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-center p-3">
+                                        <i class="fab fa-apple fa-4x mb-3"></i>
+                                        <h5>macOS</h5>
+                                        <p>Version 2.4.0 | 145 MB</p>
+                                        <button class="btn btn-3d btn-sm btn-primary">Download</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <h5>System Requirements</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-transparent text-light border-light">OS: Windows 10 or
+                                        macOS 10.14+</li>
+                                    <li class="list-group-item bg-transparent text-light border-light">Processor:
+                                        Quad-core CPU</li>
+                                    <li class="list-group-item bg-transparent text-light border-light">Memory: 8GB RAM
+                                    </li>
+                                    <li class="list-group-item bg-transparent text-light border-light">Graphics: DirectX
+                                        11 compatible GPU</li>
+                                    <li class="list-group-item bg-transparent text-light border-light">Storage: 2GB
+                                        available space</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4 class="text-primary">Dreadrix GAMING</h4>
+                    <p>Experience the next dimension of gaming with our cutting-edge 3D platform.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-light fs-5"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light fs-5"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light fs-5"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light fs-5"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="text-light fs-5"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none" data-page="home">Home</a></li>
+                        <li><a href="#" class="text-light text-decoration-none" data-page="games">Games</a></li>
+                        <li><a href="#" class="text-light text-decoration-none" data-page="features">Features</a></li>
+                        <li><a href="#" class="text-light text-decoration-none" data-page="community">Community</a></li>
+                        <li><a href="#" class="text-light text-decoration-none" data-page="support">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Help Center</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">FAQs</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Contact Us</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">System Status</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5>Newsletter</h5>
+                    <p>Subscribe to get updates on new games and features.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2025 Dreadrix Gaming. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
